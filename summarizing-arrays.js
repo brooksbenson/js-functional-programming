@@ -22,9 +22,15 @@ function countLetterGrades (grades, grade) {
   return { ...grades, f: f + 1};
 }
 
-console.log(letterGradeCount);
-
 const reviews = [4.5, 4.0, 5.0, 2.0, 1.0, 5.0, 3.0, 4.0, 1.0, 5.0, 4.5, 3.0, 2.5, 2.0];
+
+const reviewCount = reviews.reduce(groupByReviews);
+console.log(reviewCount);
+
+function groupByReviews(reviews = {}, review) {
+  const count = reviews[review] || 0;
+  return { ...reviews, [review]: count + 1 };
+}
 
 // 1. Using the reduce function, create an object that
 // has properties for each review value, where the value
