@@ -1,0 +1,11 @@
+{
+  "name": "fpjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/brooksbenson/js-functional-programming",
+  "author": "Brooks Benson <brooksbenson01@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
+}
