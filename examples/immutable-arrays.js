@@ -9,6 +9,6 @@ const updatedFriends = addedFriends.map(name => name.length);
 
 // removing values from original value
 const longestNameLength = Math.max(...friendNameLengths);
-const shorterNamedFriends = addedFriends.filter(name => {
-  return name.length !== longestNameLength;
-});
+const shorterNamedFriends = addedFriends.filter(
+  name => name.length !== longestNameLength
+);

@@ -12,17 +12,32 @@ const average = total / count;
 // counting letter grades
 const letterGradeCount = grades.reduce(countLetterGrades, {});
 
-function countLetterGrades (grades, grade) {
+function countLetterGrades(grades, grade) {
   const { a = 0, b = 0, c = 0, d = 0, f = 0 } = grades;
-  if (grade >= 90) return { ...grades, a: a + 1};
-  if (grade >= 80) return { ...grades, b: b + 1};
-  if (grade >= 70) return { ...grades, c: c + 1};
-  if (grade >= 60) return { ...grades, d: d + 1};
+  if (grade >= 90) return { ...grades, a: a + 1 };
+  if (grade >= 80) return { ...grades, b: b + 1 };
+  if (grade >= 70) return { ...grades, c: c + 1 };
+  if (grade >= 60) return { ...grades, d: d + 1 };
 
-  return { ...grades, f: f + 1};
+  return { ...grades, f: f + 1 };
 }
 
-const reviews = [4.5, 4.0, 5.0, 2.0, 1.0, 5.0, 3.0, 4.0, 1.0, 5.0, 4.5, 3.0, 2.5, 2.0];
+const reviews = [
+  4.5,
+  4.0,
+  5.0,
+  2.0,
+  1.0,
+  5.0,
+  3.0,
+  4.0,
+  1.0,
+  5.0,
+  4.5,
+  3.0,
+  2.5,
+  2.0
+];
 
 const reviewGroupCount = reviews.reduce(groupByReviews);
 
